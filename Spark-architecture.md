@@ -1,6 +1,7 @@
 APACHE SPARK ([Kiến trúc Apache Spark | Giải thích kiến ​​trúc hệ thống phân tán | Edureka](https://www.edureka.co/blog/spark-architecture/))    
 
 * Introduction
+  
   ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/001-768x583.png)
   
   - Spark core
@@ -20,7 +21,8 @@ APACHE SPARK ([Kiến trúc Apache Spark | Giải thích kiến ​​trúc hệ
 * Architecture
   
   1. Two Main Abstractions of Apache Spark
-  * RDDs (Resilient Distributed Dataset): 
+  * RDDs (Resilient Distributed Dataset):
+    
     ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/Partitions.png)
     
     - RDDs are the building blocks of any Spark application. RDDs Stands for:
@@ -29,6 +31,7 @@ APACHE SPARK ([Kiến trúc Apache Spark | Giải thích kiến ​​trúc hệ
       * **_Distributed_**:  Distributed data among the multiple nodes in a cluster
       * **_Dataset:_** Collection of partitioned data with values
     * It is a layer of abstracted data over the distributed collection. It is immutable in nature and follows [lazy transformations](https://www.edureka.co/blog/spark-tutorial/#Spark_Features).
+      
       ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture1-5-768x266.png "Workflow of RDD")
     
     * With RDDs, you can perform two types of operations:

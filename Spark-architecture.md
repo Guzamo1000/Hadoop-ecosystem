@@ -47,8 +47,22 @@ APACHE SPARK ([Kiến trúc Apache Spark | Giải thích kiến ​​trúc hệ
   
   + Cluster manager: 
   
-  + Worker node: 
+  + Worker node: The slave nodes whose job is to basically execute the tasks. These tasks are then executed on the partitioned RDDs in the worker node and hence returns back the result to the Spark Context.
   
   + Executor: The Spark Driver resembles the cockpit of a Spark application. It performs the role of the Spark application’s execution controller. The Spark driver keeps track of all the application states for the Spark cluster. The cluster manager must be interfaced with the Spark driver in order to obtain physical resources and start executors.
   
   + Task
+3. workflow
+   ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture9-1-768x430.png)
+   
+   - **STEP 1:** The client submits spark user application code. When an application code is submitted, the driver implicitly converts user code that contains transformations and actions into a logically _directed acyclic graph_ called _**DAG.**_ At this stage, it also performs optimizations such as pipelining transformations.
+   
+   - **STEP 2:** After that, it converts the logical graph called DAG into physical execution plan with many stages. After converting into a physical execution plan, it creates physical execution units called tasks under each stage. Then the tasks are bundled and sent to the cluster.
+   
+   - **STEP 3:** Now the driver talks to the cluster manager and negotiates the resources. Cluster manager launches executors in worker nodes on behalf of the driver. At this point, the driver will send the tasks to the executors based on data placement. When executors start, they register themselves with drivers. So, the driver will have a complete view of executors that are executing the task.
+     
+     
+     ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture8-2.png)
+     
+     
+   - **STEP 4:** During the course of execution of tasks, driver program will monitor the set of executors that runs. Driver node also schedules future tasks based on data placement.

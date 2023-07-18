@@ -94,5 +94,6 @@ APACHE SPARK
     - In addition, each batch of data is a [Resilient Distributed Dataset (RDD)](https://www.databricks.com/glossary/what-is-rdd), which is the basic abstraction of a fault-tolerant dataset in Spark. This allows the streaming data to be processed using any Spark code or library.
 
     ![](https://www.databricks.com/wp-content/uploads/2015/07/image21.png)
-  
-  - 
+
+*  Spark SQL Architecture ([](https://www.tutorialspoint.com/spark_sql/spark_sql_introduction.htm#:~:text=Spark%20SQL%20Architecture&text=This%20architecture%20contains%20three%20layers,scala%2C%20java%2C%20HiveQL).)
+  ![](https://www.tutorialspoint.com/spark_sql/images/spark_sql_architecture.jpg)

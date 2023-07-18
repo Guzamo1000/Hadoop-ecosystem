@@ -56,6 +56,7 @@ APACHE SPARK ([Kiến trúc Apache Spark | Giải thích kiến ​​trúc hệ
   
   + Task
 3. workflow
+
    ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture9-1-768x430.png)
    
    - **STEP 1:** The client submits spark user application code. When an application code is submitted, the driver implicitly converts user code that contains transformations and actions into a logically _directed acyclic graph_ called _**DAG.**_ At this stage, it also performs optimizations such as pipelining transformations.

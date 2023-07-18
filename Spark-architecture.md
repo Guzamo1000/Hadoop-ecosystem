@@ -17,7 +17,7 @@ APACHE SPARK
 - SparkR
 * Install ([How to Install Apache Spark on Ubuntu 20.04 (Step by Step) (cloudinfrastructureservices.co.uk)](https://cloudinfrastructureservices.co.uk/how-to-install-apache-spark-on-ubuntu-20-04/))
 
-* Architecture apache spark core ()
+* Architecture apache spark core ([spark core](https://www.edureka.co/blog/spark-architecture/))
   
   1. Two Main Abstractions of Apache Spark
   * RDDs (Resilient Distributed Dataset): 

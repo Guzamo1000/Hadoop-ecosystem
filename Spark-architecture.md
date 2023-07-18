@@ -31,7 +31,7 @@ APACHE SPARK
       * **_Dataset:_** Collection of partitioned data with values
     * It is a layer of abstracted data over the distributed collection. It is immutable in nature and follows [lazy transformations](https://www.edureka.co/blog/spark-tutorial/#Spark_Features).
       
-      * ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture1-5-768x266.png "Workflow of RDD")
+      ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture1-5-768x266.png "Workflow of RDD")
     
     * With RDDs, you can perform two types of operations:
       

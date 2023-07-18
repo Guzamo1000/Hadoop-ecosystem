@@ -58,17 +58,18 @@ APACHE SPARK
   3. workflow
   
   ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture9-1-768x430.png)
-- **STEP 1:** The client submits spark user application code. When an application code is submitted, the driver implicitly converts user code that contains transformations and actions into a logically _directed acyclic graph_ called _**DAG.**_ At this stage, it also performs optimizations such as pipelining transformations.
+  
+  - **STEP 1:** The client submits spark user application code. When an application code is submitted, the driver implicitly converts user code that contains transformations and actions into a logically _directed acyclic graph_ called _**DAG.**_ At this stage, it also performs optimizations such as pipelining transformations.
 
-- **STEP 2:** After that, it converts the logical graph called DAG into physical execution plan with many stages. After converting into a physical execution plan, it creates physical execution units called tasks under each stage. Then the tasks are bundled and sent to the cluster.
+  - **STEP 2:** After that, it converts the logical graph called DAG into physical execution plan with many stages. After converting into a physical execution plan, it creates physical execution units called tasks under each stage. Then the tasks are bundled and sent to the cluster.
 
-- **STEP 3:** Now the driver talks to the cluster manager and negotiates the resources. Cluster manager launches executors in worker nodes on behalf of the driver. At this point, the driver will send the tasks to the executors based on data placement. When executors start, they register themselves with drivers. So, the driver will have a complete view of executors that are executing the task.
+  - **STEP 3:** Now the driver talks to the cluster manager and negotiates the resources. Cluster manager launches executors in worker nodes on behalf of the driver. At this point, the driver will send the tasks to the executors based on data placement. When executors start, they register themselves with drivers. So, the driver will have a complete view of executors that are executing the task.
 
   ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Picture8-2.png)
 
-- **STEP 4:** During the course of execution of tasks, driver program will monitor the set of executors that runs. Driver node also schedules future tasks based on data placement.
+  - **STEP 4:** During the course of execution of tasks, driver program will monitor the set of executors that runs. Driver node also schedules future tasks based on data placement.
   
-  - Architecture apache spark streaming ([Spark Streaming: Đi sâu vào Mô hình Kiến trúc và Thực thi (databricks.com)](https://www.databricks.com/blog/2015/07/30/diving-into-apache-spark-streamings-execution-model.html))
+* Architecture apache spark streaming ([Spark Streaming: Đi sâu vào Mô hình Kiến trúc và Thực thi (databricks.com)](https://www.databricks.com/blog/2015/07/30/diving-into-apache-spark-streamings-execution-model.html))
   
   - Stream Processing Architectures - The Old and the New
   
